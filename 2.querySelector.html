@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="title">
+
+        How to select a html element using getElementById
+
+    </h1>
+
+    <ul>
+
+        <li>
+            <span class="item">This is Item1</span>
+        </li>
+
+         <li>
+            <span class="item">This is Item2</span>
+        </li>
+
+         <li>
+            <span class="item">This is Item3</span>
+        </li>
+
+         <li>
+            <span class="item">This is Item4</span>
+        </li>
+
+         <li>
+            <span class="item">This is Item5</span>
+        </li>
+
+    </ul>
+
+    <script>
+        // return one data
+        console.log(document.querySelector("#title")); // for  ID
+
+        console.log(document.querySelector(".item")); // for Class
+
+        console.log(document.querySelector("ul li:nth-child(2) .item")); // for Advanced Selector
+
+        // return all data
+
+        let nodeList = document.querySelectorAll(".item");
+
+        for( let i = 0; i < nodeList.length; i++){
+            console.log(nodeList[i]);
+        }
+
+        // Can use "ForEach" Method directly
+        nodeList.forEach((node) => console.log(node));
+
+    </script>
+    
+</body>
+</html>

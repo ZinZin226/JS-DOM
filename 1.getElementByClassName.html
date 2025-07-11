@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="title">
+
+        How to select a html element using getElementById
+
+    </h1>
+
+    <ul>
+
+        <li>
+            <span class="item">This is Item1</span>
+        </li>
+
+         <li>
+            <span class="item">This is Item2</span>
+        </li>
+
+         <li>
+            <span class="item">This is Item3</span>
+        </li>
+
+         <li>
+            <span class="item">This is Item4</span>
+        </li>
+
+         <li>
+            <span class="item">This is Item5</span>
+        </li>
+
+    </ul>
+
+    <script>
+       
+       let itemCollection = document.getElementsByClassName("item"); // Can't use "forEach" Method Directly because it is not really Array => Change first Array form
+
+        // check  => Is Array or not (Array.isArray())
+        // change to Array (Array.from())
+
+       Array.from(itemCollection).forEach((item) => console.log(item)); // Array's ForEach Method
+
+       // for loop Method
+       for(let i=0; i < itemCollection.length; i++) {
+        console.log(itemCollection[i]);
+       }
+    </script>
+</body>
+</html>
