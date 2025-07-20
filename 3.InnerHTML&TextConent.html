@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">This is title</h1>
+
+    <ul id="list">
+        <li>List item One.</li>
+        <li>List item Two.</li>
+        <li>List item Three.</li>
+        <li>List item Four.</li>
+    </ul>
+
+    <script>
+        let title=document.getElementById("title");
+        title.textContent = "This is update title "; // change
+        title.textContent += "new"; // add
+        console.log(title.textContent);
+
+        let list = document.getElementById("list");
+        list.innerHTML = "<p>This is new list</p>"; // update
+        list.innerHTML += "<li>List item Five</li>"; // add
+        console.log(list.innerHTML);
+    </script>
+</body>
+</html>

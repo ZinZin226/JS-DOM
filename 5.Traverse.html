@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <p>Hello</p>
+         <h1 id="heading">Welcome From DOM Basic Course</h1>
+         <p>Hello World</p>
+    </div>
+   
+
+    <script>
+        let heading = document.getElementById("heading");
+        console.log(heading.parentElement); // or paraentNode
+        let header = document.getElementsByClassName('header')[0];
+        console.log(header.childNodes); // include textnode (\n)
+
+        console.log(header.children); // not include textnode
+
+        console.log(heading.nextSibling); // \n par
+
+        console.log(heading.nextElementSibling); // \n ma par
+
+        console.log(heading.previousSibling);
+        console.log(heading.previousElementSibling);
+    </script>
+</body>
+</html>

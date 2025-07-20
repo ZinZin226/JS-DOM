@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <button id="button">Click</button>
+
+        <ul id="mylist">
+            <li>Tea</li>
+            <li>Coffee</li>
+        </ul>
+    </div>
+
+    <script>
+        const button = document.getElementById("button");
+        const myList = document.getElementById("mylist");
+        button.addEventListener("click", function(){
+            let liElement = document.createElement("li");
+            liElement.innerText= "Soda";
+            // mylist.insertBefore(liElement,mylist.children[1]);
+            // mylist.insertBefore(liElement, null);
+            // mylist.appendChild(liElement);
+            // mylist.insertAdjacentElement("beforebegin", liElement); 
+            // mylist.insertAdjacentElement("afterbegin", liElement);
+            // mylist.insertAdjacentElement("beforeend", liElement);
+            mylist.insertAdjacentElement("afterend", liElement);
+        });
+    </script>
+</body>
+</html>

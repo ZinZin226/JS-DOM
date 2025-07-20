@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">Welcome From DOM Basic Course</h1>
+    <div class="blog">
+        <h1>This is Blog title</h1>
+        <p>This is Blog description</p>
+    </div>
+
+    <script>
+        let heading =document.getElementById("heading");
+        let blog = document.getElementsByClassName('blog')[0];
+        console.log(blog);
+        console.log("This is heading node type: " + heading.nodeType); // show with numbers => Check at  "Mdn" Website
+        console.log("This is heading node name: " + heading.nodeName); // show woth names
+        // let cloneHeading = heading.cloneNode(); // copy only HTML Element
+        let cloneHeading = heading.cloneNode(true); // copy all
+        console.log(cloneHeading);
+        console.log(heading);
+
+        let cloneBlog = blog.cloneNode(true);
+        console.log(cloneBlog);
+    </script>
+</body>
+</html>
